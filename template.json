@@ -1,7 +1,8 @@
 {
   "variables": {
     "aws_access_key": "",
-    "aws_secret_key": ""
+    "aws_secret_key": "",
+    "version": ""
   },
   "provisioners": [
     {
@@ -18,8 +19,7 @@
       "source_ami": "ami-0ad99772",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
-      "ami_name": "common_packer"
+      "ami_name": "common_packer_{{user `version`}}"
     }
   ]
 }
-
